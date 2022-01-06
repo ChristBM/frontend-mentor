@@ -1,0 +1,193 @@
+/* Soft-blue: hsl(215, 51%, 70%); */
+/* Cyan: hsl(178, 100%, 50%); */
+/* Very-dark-blue-main-BG: hsl(217, 54%, 11%); */
+/* Very-dark-blue-card-BG: hsl(216, 50%, 16%); */
+/* Very-dark-blue-line: hsl(215, 32%, 27%); */
+/* White: hsl(0, 0%, 100%); */
+
+.container {
+  display: flex;
+  width: 350px;
+  height: 600px;
+  padding: 25px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 6px;
+  background-color: hsl(216, 50%, 16%);
+  box-shadow: 0px 20px 30px hsl(217, 54%, 6%);
+}
+
+.img_container {
+  width: 306px;
+  height: 306px;
+  position: relative;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.img_container::after {
+  content: '';
+  width: 306px;
+  height: 306px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  border-radius: 10px;
+  background: url('../../public/nft_card_img/icon-view.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.img_container:hover::after {
+  opacity: 1;
+}
+
+.img_container::before {
+  content: '';
+  width: 306px;
+  height: 306px;
+  position: absolute;
+  z-index: 2;
+  border-radius: 10px;
+  background-color: hsl(178, 100%, 50%);
+  opacity: 0;
+}
+
+.img_container:hover::before {
+  opacity: 0.5;
+}
+
+.img {
+  border-radius: 10px;
+}
+
+.texts_container {
+  color: hsl(0, 0%, 100%);
+}
+
+.title {
+  padding-block-start: 30px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.text {
+  width: 100%;
+  padding-block: 20px;
+  color: hsl(215, 51%, 70%);
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.value_container {
+  display: flex;
+  width: 100%;
+  padding-block-end: 20px;
+  margin-block-end: 18px;
+  border-bottom: 1px solid hsl(215, 32%, 27%);
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text_icon_cont {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text_price {
+  color: hsl(178, 100%, 50%);
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.text_upd {
+  color: hsl(215, 51%, 70%);
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.author {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar_cont {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 100%);
+}
+
+.avatar_img {
+  object-fit: cover;
+}
+
+.author_text {
+  color: hsl(215, 51%, 70%);
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.author_name {
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+.author_name:hover,
+.title:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    width: 330px;
+    height: 550px;
+    padding: 24px;
+  }
+
+  .img_container {
+    width: 280px;
+    height: 280px;
+    border-radius: 10px;
+  }
+
+  .img_container::after {
+    width: 280px;
+    height: 280px;
+    border-radius: 10px;
+  }
+
+  .img_container::before {
+    width: 280px;
+    height: 280px;
+    border-radius: 10px;
+  }
+
+  .img_container:hover::before {
+    opacity: 0.5;
+  }
+
+  .img {
+    border-radius: 10px;
+  }
+
+  .value_container {
+    margin-block-end: 16px;
+  }
+}
