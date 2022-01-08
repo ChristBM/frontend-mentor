@@ -1,0 +1,182 @@
+/* @value Pale-blue: hsl(225, 100%, 94%); */
+@value Bright-blue: hsl(245, 75%, 52%);
+@value Very-pale-blue: hsl(225, 100%, 98%);
+@value Desaturated-blue: hsl(224, 23%, 55%);
+@value Dark-blue: hsl(223, 47%, 23%);
+
+.container {
+  display: flex;
+  width: 330px;
+  height: 570px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 20px 20px rgba(208, 218, 255, 0.972);
+}
+
+.illustration {
+  width: 100%;
+  height: 160px;
+  margin-block-end: 40px;
+  border-radius: 20px 20px 0 0;
+}
+
+.illustration_img {
+  border-radius: 20px 20px 0 0;
+}
+
+.texts {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: Dark-blue;
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.abstract {
+  padding-block-start: 20px;
+  padding-block-end: 30px;
+  padding-inline: 40px;
+  color: Desaturated-blue;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: calc(1.4rem * 1.6);
+}
+
+.plan_cont {
+  display: flex;
+  width: 280px;
+  height: 80px;
+  margin-block-end: 25px;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: Very-pale-blue;
+}
+
+.plan {
+  display: flex;
+  width: auto;
+  height: 100%;
+  padding-block: 20px;
+  padding-inline-end: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.plan_name {
+  color: Dark-blue;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.plan_price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: Desaturated-blue;
+}
+
+.plan_change {
+  color: Bright-blue;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.plan_change:hover {
+  text-decoration: none;
+  color: Desaturated-blue;
+}
+
+.btn {
+  width: 280px;
+  height: 50px;
+  margin-block-end: 25px;
+  border-style: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: Bright-blue;
+  box-shadow: 0px 20px 20px rgba(208, 218, 255, 0.972);
+}
+
+.btn:hover {
+  background-color: Desaturated-blue;
+}
+
+.cancel {
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: Desaturated-blue;
+}
+
+.cancel:hover {
+  color: Dark-blue;
+}
+
+@media screen and (min-width: 375px) {
+
+  .container {
+    width: 450px;
+    height: 700px;
+  }
+
+  .illustration {
+    height: 220px;
+    margin-block-end: 45px;
+  }
+
+  .title {
+    font-size: 2.8rem;
+  }
+
+  .abstract {
+    padding-block-start: 20px;
+    padding-block-end: 20px;
+    font-size: 1.6rem;
+    line-height: calc(1.6rem * 1.6);
+  }
+
+  .plan_cont {
+    width: 356px;
+    height: 100px;
+    margin-block-end: 32px;
+    border-radius: 10px;
+  }
+
+  .plan {
+    width: auto;
+    height: 100%;
+    padding-inline-end: 60px;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .plan_name {
+    font-size: 1.6rem;
+    font-weight: 900;
+  }
+
+  .plan_price {
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    width: 356px;
+    margin-block-end: 35px;
+    font-size: 1.6rem;
+  }
+
+}

@@ -1,13 +1,12 @@
-import React from 'react'
+import { ReactElement } from 'react'
 import Image from 'next/image'
 import nftcard from './nftcard.module.css'
-import image_equilibrium from '../../public/nft_card_img/image-equilibrium.jpg'
-import icon_ethereum from '../../public/nft_card_img/icon-ethereum.svg'
-import icon_clock from '../../public/nft_card_img/icon-clock.svg'
-import icon_view from '../../public/nft_card_img/icon-view.svg'
-import image_avatar from '../../public/nft_card_img/image-avatar.png'
+import image_equilibrium from '@public/nft_card_img/image-equilibrium.jpg'
+import icon_ethereum from '@public/nft_card_img/icon-ethereum.svg'
+import icon_clock from '@public/nft_card_img/icon-clock.svg'
+import image_avatar from '@public/nft_card_img/image-avatar.png'
 
-export default function NftCard() {
+export default function NftCard(): ReactElement {
 	return (
 		<div className={nftcard.container}>
 			<div className={nftcard.img_container}>

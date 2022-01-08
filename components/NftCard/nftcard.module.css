@@ -1,9 +1,9 @@
-/* Soft-blue: hsl(215, 51%, 70%); */
-/* Cyan: hsl(178, 100%, 50%); */
-/* Very-dark-blue-main-BG: hsl(217, 54%, 11%); */
-/* Very-dark-blue-card-BG: hsl(216, 50%, 16%); */
-/* Very-dark-blue-line: hsl(215, 32%, 27%); */
-/* White: hsl(0, 0%, 100%); */
+@value Soft-blue: hsl(215, 51%, 70%);
+@value Cyan: hsl(178, 100%, 50%);
+/* @value Very-dark-blue-main-BG: hsl(217, 54%, 11%); */
+@value Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+@value Very-dark-blue-line: hsl(215, 32%, 27%);
+@value White: hsl(0, 0%, 100%);
 
 .container {
   display: flex;
@@ -13,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   border-radius: 6px;
-  background-color: hsl(216, 50%, 16%);
+  background-color: Very-dark-blue-card-BG;
   box-shadow: 0px 20px 30px hsl(217, 54%, 6%);
 }
 
@@ -51,7 +51,7 @@
   position: absolute;
   z-index: 2;
   border-radius: 10px;
-  background-color: hsl(178, 100%, 50%);
+  background-color: Cyan;
   opacity: 0;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .texts_container {
-  color: hsl(0, 0%, 100%);
+  color: White;
 }
 
 .title {
@@ -77,7 +77,7 @@
 .text {
   width: 100%;
   padding-block: 20px;
-  color: hsl(215, 51%, 70%);
+  color: Soft-blue;
   font-size: 1.6rem;
   font-weight: 300;
 }
@@ -87,7 +87,7 @@
   width: 100%;
   padding-block-end: 20px;
   margin-block-end: 18px;
-  border-bottom: 1px solid hsl(215, 32%, 27%);
+  border-bottom: 1px solid Very-dark-blue-line;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -106,13 +106,13 @@
 }
 
 .text_price {
-  color: hsl(178, 100%, 50%);
+  color: Cyan;
   font-size: 1.6rem;
   font-weight: 400;
 }
 
 .text_upd {
-  color: hsl(215, 51%, 70%);
+  color: Soft-blue;
   font-size: 1.6rem;
   font-weight: 300;
 }
@@ -131,7 +131,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  border: 1px solid hsl(0, 0%, 100%);
+  border: 1px solid White;
 }
 
 .avatar_img {
@@ -139,19 +139,19 @@
 }
 
 .author_text {
-  color: hsl(215, 51%, 70%);
+  color: Soft-blue;
   font-size: 1.6rem;
   font-weight: 300;
 }
 
 .author_name {
-  color: hsl(0, 0%, 100%);
+  color: White;
   cursor: pointer;
 }
 
 .author_name:hover,
 .title:hover {
-  color: hsl(178, 100%, 50%);
+  color: Cyan;
 }
 
 @media screen and (max-width: 375px) {

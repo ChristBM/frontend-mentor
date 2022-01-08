@@ -1,16 +1,18 @@
+import { ReactElement } from 'react'
 import Head from 'next/head'
-import NftCard from '../../../components/NftCard/NftCard'
+import NftCard from '@components/NftCard/NftCard'
 
-export default function nft_card() {
+export default function Nft_card(): ReactElement {
 	return (
 		<div className='nft_card_page'>
 			<Head>
 				<link rel='preconnect' href='https://fonts.googleapis.com' />
-				<link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin />
+				<link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin="true" />
 				<link
 					href='https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap'
 					rel='stylesheet'
 				/>
+				<title>NFT Card Component Solution</title>
 			</Head>
 			<NftCard />
 			<style jsx>{`
