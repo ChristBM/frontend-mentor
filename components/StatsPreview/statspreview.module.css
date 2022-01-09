@@ -1,0 +1,142 @@
+@value Dark-desaturated-blue: hsl(244, 38%, 16%);
+@value Soft-violet: hsl(277, 64%, 61%);
+@value White-title: hsl(0, 0%, 100%);
+@value Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+
+.container {
+  display: grid;
+  width: 330px;
+  height: 800px;
+  border-radius: 10px;
+  grid-template-columns: auto auto;
+  grid-template-rows: 242.19px auto;
+  background-color: Dark-desaturated-blue;
+}
+
+.img_container {
+  grid-area: 1/1/2/3;
+  width: 100%;
+  height: 242.19px;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+}
+
+.img_container::after {
+  content: '';
+  width: 100%;
+  height: 242.19px;
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: Soft-violet;
+  opacity: 0.4;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+  background-image: url('/stats_preview/image-header-mobile.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.texts_cont {
+  grid-area: 2/1/3/3;
+  display: flex;
+  padding: 40px 30px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Inter', Helvetica;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: White-title;
+}
+
+.title_insights {
+  color: Soft-violet;
+}
+
+.abstract {
+  padding-block-start: 20px;
+  padding-block-end: 40px;
+  text-align: center;
+  font-family: 'Inter', Helvetica;
+  font-size: 1.5rem;
+  line-height: calc(1.5rem * 1.7);
+  font-weight: 400;
+  color: Slightly-transparent-white;
+}
+
+.stats_cont {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media screen and (min-width: 1114px) {
+  .container {
+    width: 1110px;
+    height: 446px;
+    grid-template-columns: auto 540px;
+    grid-template-rows: none;
+  }
+
+  .img_container {
+    grid-area: 1/2/2/3;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .img_container::after {
+    content: '';
+    width: 100%;
+    height: 446px;
+    border-radius:0 10px 10px 0;
+  }
+
+  .img {
+    border-radius: 0 10px 10px 0;
+    background-image: url('/stats_preview/image-header-desktop.jpg');
+  }
+
+  .texts_cont {
+    grid-area: 1/1/2/2;
+    display: flex;
+    padding: 72px 110px 0 73px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    text-align: left;
+    font-size: 3.6rem;
+  }
+
+  .abstract {
+    padding-block-start: 25px;
+    padding-block-end: 70px;
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: calc(1.5rem * 1.7);
+  }
+
+  .stats_cont {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: left;
+    flex-direction: row;
+    gap: 65px;
+  }
+}
