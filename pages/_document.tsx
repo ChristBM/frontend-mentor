@@ -9,9 +9,12 @@ class MyDocument extends Document {
 
 	render() {
 		return (
-			<Html>
+			<Html lang="en">
 				<Head>
 					<meta charSet="utf-8" />
+					<meta name="description" content="Hi, I'm ChristBM and these are my Frontend Mentor Solutions, Happy Hacking!"/>
+					<meta name="robots" content="index-follow"/>
+					<meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
 					<Favicon />
 				</Head>
 				<body>

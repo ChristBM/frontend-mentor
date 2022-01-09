@@ -1,16 +1,16 @@
 import Head from 'next/head'
 import { ReactElement } from 'react'
-import StatsPreview from '@components/StatsPreview/StatsPreview'
+import ThreeColumns from '@components/ThreeColumns/ThreeColumns'
 
-export default function Stats_preview(): ReactElement {
+export default function Three_columns(): ReactElement {
 	return (
-		<div className='stats_preview'>
+		<div className='three_columns'>
 			<Head>
-				<title>Stats Preview Card Component</title>
+				<title>3-Column Preview Card Component</title>
 				<link rel='preconnect' href='https://fonts.googleapis.com' />
 				<link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='true' />
 				<link
-					href='https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'
+					href='https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap'
 					rel='stylesheet'
 				/>
 				<link
@@ -18,18 +18,18 @@ export default function Stats_preview(): ReactElement {
 					rel='stylesheet'
 				/>
 			</Head>
-			<StatsPreview />
+			<ThreeColumns />
 			<style jsx>{`
-				.stats_preview {
+				.three_columns {
 					display: flex;
 					width: 100%;
-					height: 900px;
+					height: 1500px;
+					background-color: hsl(0, 0%, 95%);
 					justify-content: center;
 					align-items: center;
-					background-color: hsl(233, 47%, 7%);
 				}
-				@media screen and (min-width: 1114px) {
-					.stats_preview {
+				@media screen and (min-width: 930px) {
+					.three_columns {
 						height: 100vh;
 					}
 				}
