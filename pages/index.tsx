@@ -1,6 +1,41 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
+import { Player } from '@lottiefiles/react-lottie-player'
 import home from '../styles/home.module.css'
+import design_web from '@public/lottie/design-web.json'
+import vercel from '@public/tecnologies/vercel-icon.svg'
+import github from '@public/tecnologies/github-icon.svg'
+import next from '@public/tecnologies/nextjs-icon.svg'
+import react from '@public/tecnologies/react.svg'
+
+interface Solutions {
+	title: string
+	href: string
+}
+
+const data: Solutions[] = [
+	{
+		title: 'NFT preview card component',
+		href: '/challenges/newbie/nft-card',
+	},
+	{
+		title: 'Order summary card',
+		href: '/challenges/newbie/order-summary',
+	},
+	{
+		title: 'Stats preview card component',
+		href: '/challenges/newbie/stats-preview',
+	},
+	{
+		title: '3-column preview card component',
+		href: '/challenges/newbie/three-columns',
+	},
+	{
+		title: 'Profile card component',
+		href: '/challenges/newbie/profile-card',
+	},
+]
 
 export default function Home() {
 	return (
@@ -9,46 +44,69 @@ export default function Home() {
 				<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 				<title>Frontend Mentor Challenges Solutions</title>
 			</Head>
-			<h1 className={home.title}>
-				Frontend Mentor Challenges Solutions Using React.js and Next.js
-			</h1>
-			<nav>
-				<ol>
-					<li className={home.li}>
-						<Link href='/challenges/newbie/nft-card'>
-							<a className={home.ancor}>NFT CARD</a>
-						</Link>
-					</li>
-
-					<li className={home.li}>
-						<Link href='/challenges/newbie/order-summary'>
-							<a className={home.ancor}>Order Summary</a>
-						</Link>
-					</li>
-
-					<li className={home.li}>
-						<Link href='/challenges/newbie/stats-preview'>
-							<a className={home.ancor}>Stats Priview</a>
-						</Link>
-					</li>
-
-					<li className={home.li}>
-						<Link href='/challenges/newbie/three-columns'>
-							<a className={home.ancor}>Three Columns</a>
-						</Link>
-					</li>
-				</ol>
-			</nav>
-			<div className={home.attribution}>
-				Challenge by
-				<a
-					href='https://www.frontendmentor.io?ref=challenge'
-					target='_blank'
-					rel='noreferrer'
-				>
-					Frontend Mentor
-				</a>. Coded by <a href='https://github.com/ChristBM'>ChristBM</a>.
-			</div>
+			<header className={home.header}>
+				<h1 className={home.title}>
+					<a
+						href='https://www.frontendmentor.io/profile/ChristBM'
+						target='_blank'
+						rel='noreferrer'
+						className={home.ancor}
+					>
+						Frontend Mentor
+					</a>
+					{` Challenges Solutions`}
+					{` Coded by `}
+					<a
+						href='https://github.com/ChristBM'
+						target='_blank'
+						rel='noreferrer'
+						className={home.ancor}
+					>
+						ChristBM
+					</a>
+				</h1>
+				<Player
+					autoplay={true}
+					loop={true}
+					hover={false}
+					keepLastFrame={false}
+					speed={1}
+					src={design_web}
+					style={{ height: 'auto', width: '300px' }}
+				/>
+			</header>
+			<main className={home.main}>
+				<h4 className={home.diffic}>
+					Difficulty: <span className={home.diffic_lvl}>Newbie</span>
+				</h4>
+				<ul className={home.list}>
+					{data.map(d => (
+						<li className={home.li} key={d.title}>
+							<Link href={d.href}>
+								<button className={home.btn}>{d.title}</button>
+							</Link>
+						</li>
+					))}
+				</ul>
+			</main>
+			<footer className={home.footer}>
+				<div className={home.footer_icon}>
+					<Image src={vercel} alt='vercel logo' width={20} height={20} />
+					<p>Vercel</p>
+				</div>
+				<div className={home.footer_icon}>
+					<Image src={github} alt='github logo' width={20} height={20} />
+					<p>GitHub</p>
+				</div>
+				<div className={home.footer_icon}>
+					<Image src={next} alt='nextjs logo' width={20} height={20} />
+					<p>Next.js</p>
+				</div>
+				<div className={home.footer_icon}>
+					<Image src={react} alt='reactjs logo' width={20} height={20} />
+					<p>React.js</p>
+				</div>
+			</footer>
 		</div>
 	)
 }

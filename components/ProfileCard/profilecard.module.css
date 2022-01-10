@@ -1,0 +1,109 @@
+@value Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+@value Dark-grayish-blue: hsl(227, 10%, 46%);
+@value Dark-gray: hsl(0, 0%, 59%);
+
+.container {
+  width: 328px;
+  height: 375px;
+  border-radius: 20px;
+  background-color: white;
+  position: relative;
+}
+
+.bg_card {
+  width: 100%;
+  height: 140px;
+  border-radius: 20px 20px 0 0;
+}
+
+.bg_img {
+  border-radius: 20px 20px 0 0;
+}
+
+.pic {
+  display: flex;
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  position: absolute;
+  top: 77px;
+  left: 110px;
+  z-index: 3;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+
+}
+
+.pic_img {
+  border-radius: 50%;
+}
+
+.texts_cont {
+  display: flex;
+  width: 100%;
+  height: 145px;
+  padding-block-start: 65px;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  border-block-end: 1px solid rgb(209, 209, 209);
+}
+
+.person {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.person_name {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: Very-dark-desaturated-blue;
+}
+
+.person_age {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: Dark-grayish-blue;
+}
+
+.person_city {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: Dark-grayish-blue;
+}
+
+.stats {
+  display: flex;
+  width: 100%;
+  height: 90px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    width: 350px;
+  }
+
+  .pic {
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    position: absolute;
+    top: 85px;
+    left: 118px;
+  }
+
+  .texts_cont {
+    padding-block-start: 75px;
+  }
+
+}
