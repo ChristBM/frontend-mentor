@@ -35,6 +35,10 @@ const data: Solutions[] = [
 		title: 'Profile card component',
 		href: '/challenges/newbie/profile-card',
 	},
+	{
+		title: 'FAQ accordion card',
+		href: '/challenges/newbie/faq-accordion',
+	},
 ]
 
 export default function Home() {
