@@ -39,6 +39,10 @@ const data: Solutions[] = [
 		title: 'FAQ accordion card',
 		href: '/challenges/newbie/faq-accordion',
 	},
+	{
+		title: 'Social proof section',
+		href: '/challenges/newbie/social-proof',
+	},
 ]
 
 export default function Home() {

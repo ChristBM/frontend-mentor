@@ -1,0 +1,101 @@
+@value title-color: hsl(300, 43%, 22%);
+@value text-color: hsl(303, 10%, 53%);
+
+.container {
+  width: 100%;
+  height: auto;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-block-end: 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.title {
+  width: 328px;
+  text-align: center;
+  font-family: 'Spartan', sans-serif;
+  font-size: 3.1rem;
+  font-weight: 700;
+  line-height: calc(1.9rem * 1.6);
+  color: title-color;
+}
+
+.text {
+  width: 328px;
+  text-align: center;
+  font-family: 'Spartan',
+  sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: calc(1.5rem * 1.6);
+  color: text-color;
+}
+
+.ratedstars_cont {
+  display: flex;
+  margin-block-end: 50px;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.testimonial_cont {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+@media screen and (min-width: 1115px) {
+
+  .container {
+    display: grid;
+    width: 1114px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .header {
+    grid-area: 1/1/2/2;
+    width: 430px;
+    margin-block-end: 0px;
+    align-items: left;
+    gap: 10px;
+  }
+
+  .title {
+    width: inherit;
+    text-align: left;
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: calc(2.8rem *1.6);
+  }
+
+  .text {
+    width: inherit;
+    text-align: left;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: calc(1.5rem * 1.6);
+  }
+
+  .ratedstars_cont {
+    grid-area: 1/2/2/3;
+    width: 540px;
+    margin-block-end: 0px;
+    align-items: flex-start;
+  }
+  .testimonial_cont {
+    grid-area: 2/1/3/3;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+}
