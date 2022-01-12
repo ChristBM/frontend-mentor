@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { Player } from '@lottiefiles/react-lottie-player'
 import home from '../styles/home.module.css'
 import design_web from '@public/lottie/design-web.json'
+import fluid from '@public/lottie/fluid.json'
 import vercel from '@public/tecnologies/vercel-icon.svg'
 import github from '@public/tecnologies/github-icon.svg'
 import next from '@public/tecnologies/nextjs-icon.svg'
@@ -14,9 +15,10 @@ interface Solutions {
 	href: string
 }
 
+/* Titles with only 3 words */
 const data: Solutions[] = [
 	{
-		title: 'NFT preview card component',
+		title: 'NFT preview card',
 		href: '/challenges/newbie/nft-card',
 	},
 	{
@@ -24,11 +26,11 @@ const data: Solutions[] = [
 		href: '/challenges/newbie/order-summary',
 	},
 	{
-		title: 'Stats preview card component',
+		title: 'Stats preview card',
 		href: '/challenges/newbie/stats-preview',
 	},
 	{
-		title: '3-column preview card component',
+		title: '3-column preview card',
 		href: '/challenges/newbie/three-columns',
 	},
 	{
@@ -42,6 +44,10 @@ const data: Solutions[] = [
 	{
 		title: 'Social proof section',
 		href: '/challenges/newbie/social-proof',
+	},
+	{
+		title: 'Article preview component',
+		href: '/challenges/newbie/article-preview',
 	},
 ]
 
@@ -80,18 +86,36 @@ export default function Home() {
 					keepLastFrame={false}
 					speed={1}
 					src={design_web}
-					style={{ height: 'auto', width: '300px' }}
+					style={{ height: 'auto', width: '250px' }}
 				/>
+				<a href='https://github.com/ChristBM/frontend-mentor'
+					target='_blank'
+					rel='noreferrer'
+					className={home.repository}>View Code<span className={home.repository_icon}></span></a>
 			</header>
 			<main className={home.main}>
 				<h4 className={home.diffic}>
-					Difficulty: <span className={home.diffic_lvl}>Newbie</span>
+					Difficulty: <span className={home.diffic_lvl}>Newbie({data.length})</span>
 				</h4>
 				<ul className={home.list}>
-					{data.map(d => (
+					{data.map((d, index) => (
 						<li className={home.li} key={d.title}>
 							<Link href={d.href}>
-								<button className={home.btn}>{d.title}</button>
+								<button className={home.btn}>
+									{d.title}
+									<span className={home.order}>
+										<Player
+											autoplay={true}
+											loop={true}
+											hover={false}
+											keepLastFrame={false}
+											speed={1}
+											src={fluid}
+											style={{ height: 'auto', width: '50px' }}
+										/>
+										<span className={home.order_text}>{index + 1}</span>
+									</span>
+								</button>
 							</Link>
 						</li>
 					))}
