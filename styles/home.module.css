@@ -36,14 +36,15 @@
   width: 60px;
   height: 60px;
   background-image: url('/tecnologies/github-icon.svg');
+  background-color: My-blue;
+  border-radius: 50%;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.repository_icon:hover {
-  border-radius: 50%;
-  background-color: My-blue;
+.repository:hover {
+  color: My-blue;
 }
 
 .title {
