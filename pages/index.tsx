@@ -49,6 +49,10 @@ const data: Solutions[] = [
 		title: 'Article preview component',
 		href: '/challenges/newbie/article-preview',
 	},
+	{
+		title: 'Feature section master',
+		href: '/challenges/newbie/feature-section',
+	},
 ]
 
 export default function Home() {
