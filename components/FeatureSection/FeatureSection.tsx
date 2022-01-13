@@ -18,8 +18,14 @@ export default function FeatureSection(): ReactElement {
 			</div>
 			<div className={featuresection.card_cont}>
 				{featureData.map(d => (
+<<<<<<< HEAD
 					<div className={d.classe} key={d.title}>
 						<FeatureCard
+=======
+          <div className={d.classe}>
+						<FeatureCard
+							key={d.title}
+>>>>>>> 5f25bfc7fea9ea65851867362bf41a69e9dc70d0
 							color={d.color}
 							title={d.title}
 							text={d.text}
