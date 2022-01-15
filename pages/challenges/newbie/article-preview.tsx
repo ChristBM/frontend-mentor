@@ -6,6 +6,7 @@ export default function Article_preview(): ReactElement {
 	return (
 		<div className='article_preview'>
 			<Head>
+				<title>Article preview component</title>
 				<link rel='preconnect' href='https://fonts.googleapis.com' />
 				<link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='true' />
 				<link

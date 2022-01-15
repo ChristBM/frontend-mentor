@@ -53,6 +53,10 @@ const data: Solutions[] = [
 		title: 'Feature section master',
 		href: '/challenges/newbie/feature-section',
 	},
+	{
+		title: 'Coming soon page',
+		href: '/challenges/newbie/coming-soon',
+	},
 ]
 
 export default function Home() {
@@ -95,7 +99,7 @@ export default function Home() {
 				<a href='https://github.com/ChristBM/frontend-mentor'
 					target='_blank'
 					rel='noreferrer'
-					className={home.repository}>View Code<span className={home.repository_icon}></span></a>
+					className={home.repository}><div className={home.repository_icon_cont} title='View Code'><span className={home.repository_icon}></span></div></a>
 			</header>
 			<main className={home.main}>
 				<h4 className={home.diffic}>
@@ -104,7 +108,7 @@ export default function Home() {
 				<ul className={home.list}>
 					{data.map((d, index) => (
 						<li className={home.li} key={d.title}>
-							<Link href={d.href}>
+							<Link href={d.href} passHref>
 								<button className={home.btn}>
 									{d.title}
 									<span className={home.order}>

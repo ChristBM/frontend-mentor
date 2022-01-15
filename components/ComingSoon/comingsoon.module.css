@@ -1,0 +1,155 @@
+@value Desaturated-Red: hsl(0, 36%, 70%);
+@value Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('/coming-soon/bg-pattern-desktop.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  width: 375px;
+  height: 85px;
+  padding-inline-start: 32px;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: 25px;
+  background-image: url('/coming-soon/logo.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.picture {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 375px) and (max-width: 1300px) {
+  .picture img {
+    border-radius: 20px;
+  }
+}
+
+.main {
+  display: flex;
+  width: 375px;
+  height: auto;
+  padding: 65px 38px 90px 38px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.texts_cont {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding-block-end: 30px;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 11px;
+  line-height: calc(2.6rem * 1.6);
+  color: Desaturated-Red;
+}
+
+.title_bold {
+  font-weight: 700;
+  color: Dark-Grayish-Red;
+}
+
+.text {
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: calc(1.4rem * 1.6);
+  color: Desaturated-Red;
+}
+
+@media screen and (min-width: 1300px) {
+
+  .container {
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    grid-template-columns: 1fr 610px;
+    overflow-x: hidden;
+    column-gap: 220px;
+    justify-items: end;
+    position: relative;
+    background-position: -50px;
+    background-size: contain;
+  }
+
+  .header {
+    grid-area: 1/1/2/2;
+    width: 450px;
+    height: 80px;
+    padding-inline-start: 5px;
+    position: absolute;
+    top: 40px;
+  }
+
+  .logo {
+    width: 160px;
+    height: 35px;
+  }
+
+  .picture {
+    grid-area: 1/2/2/3;
+  }
+
+  .main {
+    grid-area: 1/1/2/2;
+    width: 450px;
+    padding: 160px 0px 90px 5px;
+  }
+
+  .texts_cont {
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding-block-end: 0px;
+    padding: 0px 10px 38px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .title {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 6.4rem;
+    letter-spacing: 18px;
+    line-height: calc(4.3rem * 1.6);
+  }
+  .text {
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: calc(1.8rem * 1.6);
+  }
+
+}
