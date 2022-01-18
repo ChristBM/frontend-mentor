@@ -61,6 +61,10 @@ const data: Solutions[] = [
 		title: 'Signup form page',
 		href: '/challenges/newbie/signup-form',
 	},
+	{
+		title: 'Single price grid',
+		href: '/challenges/newbie/single-price',
+	},
 ]
 
 export default function Home() {
@@ -100,10 +104,16 @@ export default function Home() {
 					src={design_web}
 					style={{ height: 'auto', width: '250px' }}
 				/>
-				<a href='https://github.com/ChristBM/frontend-mentor'
+				<a
+					href='https://github.com/ChristBM/frontend-mentor'
 					target='_blank'
 					rel='noreferrer'
-					className={home.repository}><div className={home.repository_icon_cont} title='View Code'><span className={home.repository_icon}></span></div></a>
+					className={home.repository}
+				>
+					<div className={home.repository_icon_cont} title='View Code'>
+						<span className={home.repository_icon} />
+					</div>
+				</a>
 			</header>
 			<main className={home.main}>
 				<h4 className={home.diffic}>
