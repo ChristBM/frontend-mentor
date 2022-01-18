@@ -1,0 +1,122 @@
+@value Blue: hsl(248, 32%, 49%);
+@value Green: hsl(154, 59%, 51%);
+@value Red: hsl(0, 100%, 74%);
+@value Grayish-Blue: hsl(246, 25%, 77%);
+@value ShadowBox: #0000001c;
+
+.container {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.banner {
+  display: flex;
+  width: 328px;
+  height: 88px;
+  padding-inline: 60px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: Blue;
+  box-shadow: 0px 8px 0px ShadowBox;
+}
+
+.title {
+  padding-block-start: 5px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: calc(1.7rem * 1.6);
+  color: white;
+}
+
+.title_light {
+  font-weight: 400;
+  color: rgb(221, 221, 221);
+}
+
+.form {
+  display: flex;
+  width: 328px;
+  height: auto;
+  border-radius: 10px;
+  padding-block-start: 25px;
+  padding-block-end: 75px;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background-color: white;
+  box-shadow: 0px 8px 0px ShadowBox;
+}
+
+.submit_btn {
+  width: 280px;
+  height: 56px;
+  border-style: none;
+  border-radius: 5px;
+  background-color: Green;
+  box-shadow: inset 0px -5px 0px ShadowBox;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: white;
+  cursor: pointer;
+}
+
+.form__terms {
+  display: block;
+  padding-inline: 45px;
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: calc(1.4rem * 1.6);
+  color: Grayish-Blue;
+}
+
+.form__terms_red {
+  text-decoration: none;
+  font-weight: 700;
+  color: Red;
+}
+
+@media screen and (min-width: 1110px) {
+  .container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .banner {
+    width: 540px;
+    height: 60px;
+  }
+
+  .form {
+    width: 540px;
+    padding-block-start: 40px;
+    padding-block-end: 75px;
+    gap: 20px;
+  }
+
+  .submit_btn {
+    width: 460px;
+  }
+
+  .form__terms {
+    bottom: 40px;
+  }
+
+}

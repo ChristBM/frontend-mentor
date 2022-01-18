@@ -57,6 +57,10 @@ const data: Solutions[] = [
 		title: 'Coming soon page',
 		href: '/challenges/newbie/coming-soon',
 	},
+	{
+		title: 'Signup form page',
+		href: '/challenges/newbie/signup-form',
+	},
 ]
 
 export default function Home() {
