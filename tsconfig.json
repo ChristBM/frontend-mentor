@@ -5,6 +5,7 @@
       "@components/*":["components/*"],
       "@public/*":["public/*"],
       "@styles/*":["styles/*"],
+      "@hooks/*":["hooks/*"]
     },
     "target": "es5",
     "lib": [
@@ -29,7 +30,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "hooks/useWindowDimensions.tsx"  ],
   "exclude": [
     "node_modules"
   ]

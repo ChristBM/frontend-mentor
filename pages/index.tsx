@@ -65,6 +65,10 @@ const data: Solutions[] = [
 		title: 'Single price grid',
 		href: '/challenges/newbie/single-price',
 	},
+	{
+		title: 'Ping coming soon page',
+		href: '/challenges/newbie/launching-soon',
+	},
 ]
 
 export default function Home() {
