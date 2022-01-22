@@ -73,6 +73,10 @@ const dataNewbie: Solutions[] = [
 		title: 'Huddle single introductory',
 		href: '/challenges/newbie/huddle-introduction',
 	},
+	{
+		title: 'QR code component',
+		href: '/challenges/newbie/qr-code',
+	},
 ]
 
 export default function Home() {
