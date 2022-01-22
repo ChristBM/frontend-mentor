@@ -16,7 +16,7 @@ interface Solutions {
 }
 
 /* Titles with only 3 words */
-const data: Solutions[] = [
+const dataNewbie: Solutions[] = [
 	{
 		title: 'NFT preview card',
 		href: '/challenges/newbie/nft-card',
@@ -66,8 +66,12 @@ const data: Solutions[] = [
 		href: '/challenges/newbie/single-price',
 	},
 	{
-		title: 'Ping coming soon page',
+		title: 'Ping coming soon',
 		href: '/challenges/newbie/launching-soon',
+	},
+	{
+		title: 'Huddle single introductory',
+		href: '/challenges/newbie/huddle-introduction',
 	},
 ]
 
@@ -121,10 +125,10 @@ export default function Home() {
 			</header>
 			<main className={home.main}>
 				<h4 className={home.diffic}>
-					Difficulty: <span className={home.diffic_lvl}>Newbie({data.length})</span>
+					Difficulty: <span className={home.diffic_lvl}>Newbie({dataNewbie.length})</span>
 				</h4>
 				<ul className={home.list}>
-					{data.map((d, index) => (
+					{dataNewbie.map((d, index) => (
 						<li className={home.li} key={d.title}>
 							<Link href={d.href} passHref>
 								<button className={home.btn}>
