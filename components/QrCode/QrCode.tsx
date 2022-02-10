@@ -7,7 +7,7 @@ export default function QrCode():ReactElement {
 	return (
   <div className={qrcode.card}>
     <div className={qrcode.img_cont}>
-        <Image src={qr} placeholder="blur" className={qrcode.img} objectFit='contain' />
+        <Image src={qr} placeholder="blur" className={qrcode.img} objectFit='contain' alt='QR code image' />
     </div>
     <div className={qrcode.text_cont}>
         <h2 className={qrcode.title}>Improve your front-end skills by building projects</h2>

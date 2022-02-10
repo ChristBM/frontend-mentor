@@ -32,6 +32,6 @@ export default function useWindowDimensions(): WindowDimentionType {
 			window.removeEventListener('load', handleResize)
 		}
 	}, [])
-
+	console.log(dimensions)
 	return dimensions
 }

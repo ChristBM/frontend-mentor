@@ -78,6 +78,12 @@ const dataNewbie: Solutions[] = [
 		href: '/challenges/newbie/qr-code',
 	},
 ]
+const dataJunior: Solutions[] = [
+	{
+		title: 'Time tracking dashboard',
+		href: '/challenges/junior/time-tracking',
+	},
+]
 
 export default function Home() {
 	return (
@@ -128,32 +134,67 @@ export default function Home() {
 				</a>
 			</header>
 			<main className={home.main}>
-				<h4 className={home.diffic}>
-					Difficulty: <span className={home.diffic_lvl}>Newbie({dataNewbie.length})</span>
-				</h4>
-				<ul className={home.list}>
-					{dataNewbie.map((d, index) => (
-						<li className={home.li} key={d.title}>
-							<Link href={d.href} passHref>
-								<button className={home.btn}>
-									{d.title}
-									<span className={home.order}>
-										<Player
-											autoplay={true}
-											loop={true}
-											hover={false}
-											keepLastFrame={false}
-											speed={1}
-											src={fluid}
-											style={{ height: 'auto', width: '50px' }}
-										/>
-										<span className={home.order_text}>{index + 1}</span>
-									</span>
-								</button>
-							</Link>
-						</li>
-					))}
-				</ul>
+
+				<section className={home.section}>
+					<h4 className={home.diffic}>
+						Difficulty:{' '}
+						<span className={home.diffic_lvl}>Newbie({dataNewbie.length})</span>
+					</h4>
+					<ul className={home.list}>
+						{dataNewbie.map((d, index) => (
+							<li className={home.li} key={d.title}>
+								<Link href={d.href} passHref>
+									<button className={home.btn}>
+										{d.title}
+										<span className={home.order}>
+											<Player
+												autoplay={true}
+												loop={true}
+												hover={false}
+												keepLastFrame={false}
+												speed={1}
+												src={fluid}
+												style={{ height: 'auto', width: '50px' }}
+											/>
+											<span className={home.order_text}>{index + 1}</span>
+										</span>
+									</button>
+								</Link>
+							</li>
+						))}
+					</ul>
+				</section>
+
+				<section className={home.section}>
+					<h4 className={home.diffic}>
+						Difficulty:{' '}
+						<span className={home.diffic_lvl}>Junior({dataJunior.length})</span>
+					</h4>
+					<ul className={home.list}>
+						{dataJunior.map((d, index) => (
+							<li className={home.li} key={d.title}>
+								<Link href={d.href} passHref>
+									<button className={home.btn}>
+										{d.title}
+										<span className={home.order}>
+											<Player
+												autoplay={true}
+												loop={true}
+												hover={false}
+												keepLastFrame={false}
+												speed={1}
+												src={fluid}
+												style={{ height: 'auto', width: '50px' }}
+											/>
+											<span className={home.order_text}>{index + 1}</span>
+										</span>
+									</button>
+								</Link>
+							</li>
+						))}
+					</ul>
+				</section>
+
 			</main>
 			<footer className={home.footer}>
 				<div className={home.footer_icon}>
